@@ -1,4 +1,4 @@
-This is a script to process custom MTG card image from [mtg.design](https://mtg.design). It adds a sufficient bleed so that the printed cards images are roughly the same as official ones.
+This is a script to process custom MTG card images from [mtg.design](https://mtg.design). It adds a sufficient bleed so that the printed cards images are roughly the same as official ones.
 
 It's difficult to find MTG card design sites that generate high-res images suitable for printing (b/c people are worried about enabling forgeries/fraud). This system uses a super-resolution model ([Neural Enhance](https://github.com/alexjc/neural-enhance)) to upscale the generated cards.
 
