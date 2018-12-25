@@ -2,6 +2,8 @@ This is a script to process custom MTG card image from [mtg.design](https://mtg.
 
 It's difficult to find MTG card design sites that generate high-res images suitable for printing (b/c people are worried about enabling forgeries/fraud). This system uses a super-resolution model ([Neural Enhance](https://github.com/alexjc/neural-enhance)) to upscale the generated cards.
 
+I haven't yet printed cards generated using this system yet, after looking at the images the super-resolution is working well for text and symbols and in some cases works well for the card art as well.
+
 # Setup
 
 ```
