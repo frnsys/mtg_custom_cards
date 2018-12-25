@@ -58,7 +58,11 @@ if __name__ == '__main__':
     for name, image_url in tqdm(cards):
         resp = requests.get(image_url)
         im = Image.open(io.BytesIO(resp.content))
-        save_path = '{}/{}.jpg'.format(out_dir, name.lower().replace(' ', '_'))
+        slug = name.lower().replace(' ', '_')
+        save_path = '{}/{}_preview.jpg'.format(out_dir, slug)
+        im.save(save_path, quality=100)
+
+        save_path = '{}/{}.jpg'.format(out_dir, slug)
         prepare_card(im, save_path,
                      corner_size=CORNER_SIZE,
                      padding_size=PADDING_SIZE)

@@ -56,7 +56,7 @@ python prep_cards.py "https://mtg.design/u/frnsys/FER"
 THEANO_FLAGS=device=cuda0,force_device=True,dnn.base_path=/usr/local/cuda python prep_cards.py "https://mtg.design/u/frnsys/FER"
 ```
 
-Note: Using a GPU is highly recommended if you have access to one. The super-resolution processing can take quite a long time otherwise (from 4h30m to 2m for me).
+Note: Using a GPU is highly recommended if you have access to one. The super-resolution processing can take quite a long time otherwise (speed up was from 4h30m to 2m for me).
 
 ## Example image
 
