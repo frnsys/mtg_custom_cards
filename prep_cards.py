@@ -64,8 +64,8 @@ if __name__ == '__main__':
                      padding_size=PADDING_SIZE)
         files.append(save_path)
 
-    for f in tqdm(files):
-        proc = subprocess.run(
-            ['python', 'enhance.py', '--type=photo', '--zoom=2', '--device=gpu0', '../{}'.format(f)],
-            cwd='./neural-enhance'
-        )
+    files = ['../{}'.format(f) for f in files]
+    proc = subprocess.run(
+        ['python', 'enhance.py', '--type=photo', '--zoom=2', '--device=gpu0'] + files,
+        cwd='./neural-enhance'
+    )

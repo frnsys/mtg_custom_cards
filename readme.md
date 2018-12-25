@@ -1,4 +1,4 @@
-This is a script to process custom MTG card images from [mtg.design](https://mtg.design). It adds a sufficient bleed so that the printed cards images are roughly the same as official ones.
+This is a script to prepare custom MTG card images from [mtg.design](https://mtg.design) for printing. It adds a sufficient bleed so that the printed cards images are roughly the same as official ones.
 
 It's difficult to find MTG card design sites that generate high-res images suitable for printing (b/c people are worried about enabling forgeries/fraud). This system uses a super-resolution model ([Neural Enhance](https://github.com/alexjc/neural-enhance)) to upscale the generated cards.
 
@@ -56,7 +56,7 @@ python prep_cards.py "https://mtg.design/u/frnsys/FER"
 THEANO_FLAGS=device=cuda0,force_device=True,dnn.base_path=/usr/local/cuda python prep_cards.py "https://mtg.design/u/frnsys/FER"
 ```
 
-Note: Using a GPU is highly recommended if you have access to one. The super-resolution processing can take quite a long time otherwise.
+Note: Using a GPU is highly recommended if you have access to one. The super-resolution processing can take quite a long time otherwise (from 4h30m to 2m for me).
 
 ## Example image
 
